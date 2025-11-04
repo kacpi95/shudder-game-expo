@@ -16,9 +16,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Start'>
-        <Stack.Screen name='Start' component={ScreenFive} />
-        <Stack.Screen name='Battle' component={FightScreen} />
-        <Stack.Screen name='The End' component={FinalScreen} />
+        <Stack.Screen name='Start' component={StartScreen} />
+        <Stack.Screen name='Ekran 1' component={ScreenOne} />
+        <Stack.Screen name='Ekran 2' component={ScreenTwo} />
+        <Stack.Screen name='Ekran 3' component={ScreenThree} />
+        <Stack.Screen name='Ekran 4' component={ScreenFour} />
+        <Stack.Screen name='Ekran 5' component={ScreenFive} />
+        <Stack.Screen name='Bitwa' component={FightScreen} />
+        <Stack.Screen name='Koniec' component={FinalScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
