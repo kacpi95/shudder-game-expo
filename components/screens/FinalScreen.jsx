@@ -11,4 +11,31 @@ export default function FinalScreen({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  button: {
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    paddingHorizontal: 26,
+    borderRadius: 30,
+    elevation: 3,
+  },
+  buttonText: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: '600',
+    letterSpacing: 1,
+  },
+  text: {
+    marginBottom: 80,
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: '700',
+    letterSpacing: 1,
+  },
+});
