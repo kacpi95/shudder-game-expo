@@ -1,22 +1,22 @@
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 
-export default function ScreenOne({ navigation }) {
+export default function ScreenTwo({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        Noc spowijała opuszczoną wioskę mgłą, a jedynie płomień lampy przy
-        chacie rozświetlał wąską drogę. Przed Tobą dwa kierunki: ścieżka wiodąca
-        przez ciemny las, gdzie słychać szelest liści… albo stary, opuszczony
-        most, który prowadzi w stronę mgieł nad rzeką. Dokąd pójdziesz?
+        Przemierzając mroczny las, czujesz jak gałęzie haczą o Twoje ubranie.
+        Nagle pojawia się rozwidlenie dróg: jedna prowadzi w głąb lasu, gdzie
+        czeka tajemnicze światło, druga ku starym ruinom, z których dobiegają
+        dziwne dźwięki.
       </Text>
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Przez ciemny las</Text>
+          <Text style={styles.buttonText}>Idź w kierunku światła</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Przez opuszczony most</Text>
+          <Text style={styles.buttonText}>Sprawdź stare ruiny</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
   },
   text: {
     fontSize: 18,
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
-    paddingVertical: 12,
-    paddingHorizontal: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 5,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.3)',
