@@ -8,6 +8,7 @@ import ScreenOne from './components/screens/ScreenOne';
 import ScreenTwo from './components/screens/ScreenTwo';
 import ScreenThree from './components/screens/ScreenThree';
 import ScreenFour from './components/screens/ScreenFour';
+import ScreenFive from './components/screens/ScreenFive';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Start'>
-        <Stack.Screen name='Start' component={ScreenFour} />
+        <Stack.Screen name='Start' component={ScreenFive} />
         <Stack.Screen name='Battle' component={FightScreen} />
         <Stack.Screen name='The End' component={FinalScreen} />
       </Stack.Navigator>
