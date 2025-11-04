@@ -1,10 +1,13 @@
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function StartScreen() {
+export default function StartScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Gra paragrafowa</Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('Ekran 1')}
+      >
         <Text style={styles.buttonText}>Rozpocznij</Text>
       </TouchableOpacity>
     </View>

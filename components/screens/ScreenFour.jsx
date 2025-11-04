@@ -11,7 +11,10 @@ export default function ScreenFour({ navigation }) {
       </Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 1')}
+        >
           <Text style={styles.buttonText}>Wracaj do wioski</Text>
         </TouchableOpacity>
       </View>

@@ -11,11 +11,17 @@ export default function ScreenOne({ navigation }) {
       </Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 2')}
+        >
           <Text style={styles.buttonText}>Przez ciemny las</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 3')}
+        >
           <Text style={styles.buttonText}>Przez opuszczony most</Text>
         </TouchableOpacity>
       </View>

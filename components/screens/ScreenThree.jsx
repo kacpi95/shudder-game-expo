@@ -10,8 +10,17 @@ export default function ScreenThree({ navigation }) {
       </Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 5')}
+        >
           <Text style={styles.buttonText}>Wejdź do wieży</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 1')}
+        >
+          <Text style={styles.buttonText}>Wracaj do wioski</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -37,7 +46,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     width: '100%',
     position: 'absolute',
     bottom: 150,

@@ -11,11 +11,17 @@ export default function ScreenTwo({ navigation }) {
       </Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 4')}
+        >
           <Text style={styles.buttonText}>Idź w kierunku światła</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Ekran 5')}
+        >
           <Text style={styles.buttonText}>Sprawdź stare ruiny</Text>
         </TouchableOpacity>
       </View>
