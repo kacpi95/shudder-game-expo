@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 export default function ScreenFive({ navigation }) {
   return (
@@ -9,6 +9,14 @@ export default function ScreenFive({ navigation }) {
         Wszyscy Twoi dotychczasowi wybory prowadzą do tej konfrontacji. Czy
         zwyciężysz?
       </Text>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Bitwa')}
+        >
+          <Text style={styles.buttonText}>Walcz</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -29,5 +37,25 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     letterSpacing: 1,
     opacity: 0.9,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
+    position: 'absolute',
+    bottom: 150,
+  },
+  button: {
+    backgroundColor: '#fff',
+    paddingVertical: 16,
+    paddingHorizontal: 35,
+    borderRadius: 30,
+    elevation: 3,
+  },
+  buttonText: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: '600',
+    letterSpacing: 1,
   },
 });
