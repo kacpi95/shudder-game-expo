@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export default function FightScreen({ navigation }) {
@@ -16,6 +16,14 @@ export default function FightScreen({ navigation }) {
       setResult(`Remis - rzuć ponownie!`);
     }
   };
+
+  useEffect(() => {
+    if (result.includes('Przegrywasz')) {
+      setTimeout(() => {
+        navigation.navigate('Start');
+      }, 1000);
+    }
+  }, [result]);
 
   return (
     <View style={styles.container}>
