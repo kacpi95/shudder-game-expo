@@ -1,9 +1,23 @@
+import { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export default function FightScreen({ navigation }) {
+  const [result, setResult] = useState('');
+
+  const fightFunc = () => {
+    let moveOrc = Math.floor(Math.random() * 6) + 1;
+    let movePlayer = Math.floor(Math.random() * 6) + 1;
+
+    if (movePlayer > moveOrc) {
+      setResult(`Wygrywasz, wyrzuciłeś ${movePlayer} a Orc ${moveOrc}`);
+    } else if (moveOrc > movePlayer) {
+      setResult(`Przegrywasz, Orc wyrzucił ${moveOrc} a Ty ${movePlayer} `);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={fightFunc}>
         <Text style={styles.buttonText}>Walcz</Text>
       </TouchableOpacity>
     </View>
